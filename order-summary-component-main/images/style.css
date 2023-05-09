@@ -1,0 +1,141 @@
+@import url('https://fonts.google.com/specimen/Red+Hat+Display:wght500;700;900&display-swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/order-summary-component-main/images/pattern-background-desktop.svg);
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    max-width: 450px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sub-container {
+    padding: 7%;
+}
+
+h3 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sub-container .sentence {
+    color: #8a8a8a;
+    margin-bottom: 20px;
+}
+
+.sub-container .type{
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    margin-bottom: 20px;
+}
+
+.type .type-left {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.type .type-left div{
+    margin-left: 20px;
+}
+
+.type .type-left .annual{
+    font-weight: 900;
+    font-size: 16px;
+    color: hsl(223, 47%, 23%);
+}
+
+.type .type-left .price{
+    font-size: 14px;
+    color: #8a8a8a;
+}
+
+.type a {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.type a:hover {
+    text-decoration: none;
+    color: hsl(245, 75%, 52%);
+}
+
+.blocks a{
+    display: block;
+    text-decoration: none;
+}
+
+.blocks .proceed{
+    color: #fff;
+    background-color: hsl(245, 75%, 52%);
+    padding: 20px 0;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.blocks .proceed:hover{
+    background-color: hsl(224, 23%, 55%);
+}
+
+.blocks .stop {
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+}
+
+.blocks .stop:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width: 425px){
+    body{
+        background-image: url(./pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+
+    .container{
+        max-width: 85%;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    .type {
+        padding: 12px;
+    }
+
+    .type-left div{
+        margin-left: 12px;
+    }
+
+    .type .type-left div .annual{
+        font-size: 12px;
+    }
+
+    .blocks .proceed, .blocks .stop, .type a {
+        font-size: 12px;
+    }
+}
